@@ -1,4 +1,4 @@
-package com.pj.randomutil;
+package com.pj.randomutil.modelmapper;
 
 import lombok.Data;
 
@@ -7,4 +7,5 @@ class EmployeeDTO
 {
     private String firstName;
     private String lastName;
+
 }

@@ -1,4 +1,4 @@
-package com.pj.randomutil;
+package com.pj.randomutil.modelmapper;
 
 import lombok.Data;
 
@@ -17,4 +17,5 @@ class Employee
         this.email=email;
         this.phone=phone;
     }
+
 }
