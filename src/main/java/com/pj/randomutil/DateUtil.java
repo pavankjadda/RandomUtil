@@ -23,7 +23,8 @@ public class DateUtil
         System.out.println("Instant : "+Instant.now());
         System.out.println("EDT Instant Date: "+Date.from(Instant.now()));
 
-        System.out.println("EDT offsetDateTime.toLocalDate : "+offsetDateTime.toLocalDate());
+        System.out.println("EDT offsetDateTime.toLocalDateTime : "+offsetDateTime.toLocalDateTime());
+        System.out.println("EDT LocalDateTime.now() : "+LocalDateTime.now());
         return offsetDateTime.toLocalDate();
     }
 }
