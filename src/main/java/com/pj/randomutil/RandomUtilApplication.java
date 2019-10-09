@@ -25,4 +25,5 @@ public class RandomUtilApplication
 
         logger.info(" Random String: {}", RandomUtil.generateRandomAlphanumericString());
     }
+
 }

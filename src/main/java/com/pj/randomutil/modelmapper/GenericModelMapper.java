@@ -37,6 +37,4 @@ public class GenericModelMapper
         Type type = new TypeToken<List<EmployeeDTO>>() {}.getType();
         return modelMapper.map(employees,type);
     }
-
-
 }
