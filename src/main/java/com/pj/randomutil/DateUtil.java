@@ -21,7 +21,7 @@ public class DateUtil
 
         System.out.println("simpleDateFormat zonedDateTime date: "+zonedDateTime.format(dateTimeFormatter));
         System.out.println("Instant : "+Instant.now());
-        System.out.println("Instant Date: "+Date.from(Instant.now()));
+        System.out.println("EDT Instant Date: "+Date.from(Instant.now()));
 
         System.out.println("EDT offsetDateTime.toLocalDate : "+offsetDateTime.toLocalDate());
         return offsetDateTime.toLocalDate();
