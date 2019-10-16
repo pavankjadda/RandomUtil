@@ -34,6 +34,8 @@ public class RandomUtil
         return secureRandom;
     }
 
+
+
     static long getSecureRandomLongValue()
     {
         return secureRandom.nextLong();
