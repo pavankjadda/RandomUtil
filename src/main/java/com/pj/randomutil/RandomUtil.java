@@ -1,7 +1,8 @@
 package com.pj.randomutil;
 
-import java.security.SecureRandom;
 import org.apache.commons.lang3.RandomStringUtils;
+
+import java.security.SecureRandom;
 
 public class RandomUtil
 {
@@ -33,12 +34,27 @@ public class RandomUtil
         return secureRandom;
     }
 
-    static Long getRandomLongValue()
+    static long getSecureRandomLongValue()
     {
         return secureRandom.nextLong();
     }
 
-    static String generateRandomAlphanumericString()
+    static long getSecureRandomPositiveLongValue()
+    {
+        return Math.abs(secureRandom.nextLong());
+    }
+
+    static int getSecureRandomIntegerValue()
+    {
+        return secureRandom.nextInt();
+    }
+
+    static int getSecureRandomPositiveIntegerValue()
+    {
+        return Math.abs(secureRandom.nextInt());
+    }
+
+    static String generateSecureRandomAlphanumericString()
     {
         return RandomStringUtils.random(DEF_COUNT, 0, 0, true, true, null, secureRandom);
     }
