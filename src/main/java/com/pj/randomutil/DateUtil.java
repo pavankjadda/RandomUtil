@@ -1,9 +1,9 @@
 package com.pj.randomutil;
 
-import java.text.SimpleDateFormat;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 public class DateUtil
 {
@@ -11,20 +11,12 @@ public class DateUtil
     {
         getEasternTimeZoneDate();
     }
-    public static LocalDate getEasternTimeZoneDate()
+    private static void getEasternTimeZoneDate()
     {
-        OffsetDateTime offsetDateTime=OffsetDateTime.ofInstant(Instant.now(), ZoneId.of("America/New_York"));
         ZonedDateTime zonedDateTime=ZonedDateTime.ofInstant(Instant.now(), ZoneId.of("America/New_York"));
+        System.out.println("offsetDateTime.toInstant(): "+zonedDateTime.toInstant());
 
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("MM/dd/YYYY");
-        DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("MM/dd/YYYY");
-
-        System.out.println("simpleDateFormat zonedDateTime date: "+zonedDateTime.format(dateTimeFormatter));
-        System.out.println("Instant : "+Instant.now());
-        System.out.println("EDT Instant Date: "+Date.from(Instant.now()));
-
-        System.out.println("EDT offsetDateTime.toLocalDateTime : "+offsetDateTime.toLocalDateTime());
+        System.out.println("EDT offsetDateTime.toLocalDateTime : "+zonedDateTime.toLocalDateTime());
         System.out.println("EDT LocalDateTime.now() : "+LocalDateTime.now());
-        return offsetDateTime.toLocalDate();
     }
 }
