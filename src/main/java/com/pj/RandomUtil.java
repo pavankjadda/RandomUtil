@@ -43,7 +43,8 @@ public class RandomUtil
 
     static long getSecureRandomPositiveLongValue()
     {
-        return Math.abs(secureRandom.nextLong());
+        long secureRandomLongValue=getSecureRandomLongValue();
+        return secureRandomLongValue < 0L ? -secureRandomLongValue : secureRandomLongValue;
     }
 
     static int getSecureRandomIntegerValue()
@@ -53,7 +54,8 @@ public class RandomUtil
 
     static int getSecureRandomPositiveIntegerValue()
     {
-        return Math.abs(secureRandom.nextInt());
+        int secureIntegerValue=getSecureRandomIntegerValue();
+        return secureIntegerValue < 0 ? -secureIntegerValue : secureIntegerValue;
     }
 
     static String generateSecureRandomAlphanumericString()
