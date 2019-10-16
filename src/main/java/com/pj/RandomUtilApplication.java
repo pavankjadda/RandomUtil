@@ -1,4 +1,4 @@
-package com.pj.randomutil;
+package com.pj;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

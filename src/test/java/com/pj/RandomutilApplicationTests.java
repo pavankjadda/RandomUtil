@@ -1,4 +1,4 @@
-package com.pj.randomutil;
+package com.pj;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

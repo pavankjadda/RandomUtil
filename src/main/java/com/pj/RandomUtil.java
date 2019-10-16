@@ -1,4 +1,4 @@
-package com.pj.randomutil;
+package com.pj;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
