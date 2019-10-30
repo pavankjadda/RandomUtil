@@ -15,7 +15,6 @@ jobs:
       run: mvn -B package -DskipTests --file pom.xml
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 11
@@ -24,3 +23,5 @@ jobs:
         java-version: 11  
     - name: Push to Github Package registry
       run: mvn deploy -DskipTests  --file pom.xml
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
