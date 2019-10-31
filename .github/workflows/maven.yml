@@ -22,6 +22,7 @@ jobs:
       with:
         java-version: 11  
     - name: Push to Github Package registry
-      run: mvn deploy -DskipTests  --file pom.xml
+      #run: mvn deploy -DskipTests  --file pom.xml
+      run: mvn test  --file pom.xml
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
