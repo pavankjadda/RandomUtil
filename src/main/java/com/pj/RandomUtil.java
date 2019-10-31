@@ -17,12 +17,7 @@ public class RandomUtil
         secureRandom.setSeed(bytes);
     }
 
-    private RandomUtil()
-    {
-        //Singleton constructor
-    }
-
-    static SecureRandom getSecureRandomInstance()
+    public static SecureRandom getSecureRandomInstance()
     {
         if(secureRandom==null)
         {
@@ -35,29 +30,30 @@ public class RandomUtil
     }
 
 
-    static long getSecureRandomLongValue()
+
+    public static long getSecureRandomLongValue()
     {
         return secureRandom.nextLong();
     }
 
-    static long getSecureRandomPositiveLongValue()
+    public static long getSecureRandomPositiveLongValue()
     {
         long secureRandomLongValue=getSecureRandomLongValue();
         return secureRandomLongValue < 0L ? -secureRandomLongValue : secureRandomLongValue;
     }
 
-    static int getSecureRandomIntegerValue()
+    public static int getSecureRandomIntegerValue()
     {
         return secureRandom.nextInt();
     }
 
-    static int getSecureRandomPositiveIntegerValue()
+    public static int getSecureRandomPositiveIntegerValue()
     {
         int secureIntegerValue=getSecureRandomIntegerValue();
         return secureIntegerValue < 0 ? -secureIntegerValue : secureIntegerValue;
     }
 
-    static String generateSecureRandomAlphanumericString()
+    public static String generateSecureRandomAlphanumericString()
     {
         return RandomStringUtils.random(DEF_COUNT, 0, 0, true, true, null, secureRandom);
     }
