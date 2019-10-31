@@ -8,6 +8,7 @@
         <version>2.1.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.pj</groupId>
     <artifactId>randomutil</artifactId>
     <version>0.0.1</version>
@@ -61,6 +62,20 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/pavankjadda/RandomUtil</url>
+        </repository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/pavankjadda/RandomUtil</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>

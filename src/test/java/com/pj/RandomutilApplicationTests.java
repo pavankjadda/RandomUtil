@@ -9,10 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class RandomutilApplicationTests
 {
-
     @Test
     public void contextLoads()
     {
+        System.out.println("Random String: "+RandomUtil.generateSecureRandomAlphanumericString());
     }
-
 }
