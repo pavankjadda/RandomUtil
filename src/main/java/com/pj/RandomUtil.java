@@ -65,7 +65,7 @@ public class RandomUtil
         return secureIntegerValue < 0 ? -secureIntegerValue : secureIntegerValue;
     }
 
-    public static String generateSecureRandomAlphanumericString()
+    public static String getSecureRandomAlphanumericString()
     {
         return RandomStringUtils.random(DEF_COUNT, 0, 0, true, true, null, secureRandom);
     }

@@ -14,7 +14,7 @@ public class RandomUtilApplicationTest
     public void contextLoads()
     {
         Assert.assertNotNull(RandomUtil.getSecureRandomInstance());
-        System.out.println("Random String: "+RandomUtil.generateSecureRandomAlphanumericString());
+        System.out.println("Random String: "+RandomUtil.getSecureRandomAlphanumericString());
         System.out.println("Random getSecureRandomPositiveIntegerValue: "+RandomUtil.getSecureRandomPositiveIntegerValue());
         System.out.println("Random getSecureRandomPositiveLongValue: "+RandomUtil.getSecureRandomPositiveLongValue());
     }
