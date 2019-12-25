@@ -10,7 +10,7 @@ import java.security.SecureRandom;
  */
 public class RandomUtil
 {
-    private static SecureRandom secureRandom=null;
+    private static SecureRandom secureRandom;
     private static final int DEF_COUNT = 20;
 
     static
@@ -54,13 +54,18 @@ public class RandomUtil
         return secureRandom.nextInt();
     }
 
+    public static boolean getSecureRandomBooleanValue()
+    {
+        return secureRandom.nextBoolean();
+    }
+
     public static int getSecureRandomPositiveIntegerValue()
     {
         int secureIntegerValue=getSecureRandomIntegerValue();
         return secureIntegerValue < 0 ? -secureIntegerValue : secureIntegerValue;
     }
 
-    public static String generateSecureRandomAlphanumericString()
+    public static String getSecureRandomAlphanumericString()
     {
         return RandomStringUtils.random(DEF_COUNT, 0, 0, true, true, null, secureRandom);
     }
