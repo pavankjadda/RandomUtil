@@ -54,6 +54,11 @@ public class RandomUtil
         return secureRandom.nextInt();
     }
 
+    public static boolean getSecureRandomBooleanValue()
+    {
+        return secureRandom.nextBoolean();
+    }
+
     public static int getSecureRandomPositiveIntegerValue()
     {
         int secureIntegerValue=getSecureRandomIntegerValue();
