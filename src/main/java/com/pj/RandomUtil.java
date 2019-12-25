@@ -10,7 +10,7 @@ import java.security.SecureRandom;
  */
 public class RandomUtil
 {
-    private static SecureRandom secureRandom=null;
+    private static SecureRandom secureRandom;
     private static final int DEF_COUNT = 20;
 
     static
