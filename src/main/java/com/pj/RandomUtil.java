@@ -4,6 +4,10 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import java.security.SecureRandom;
 
+/**
+ *     @author Pavan K Jadda
+ *     RandomUtil class generates secure and unsecured random string, integer, long and boolean values
+ */
 public class RandomUtil
 {
     private static SecureRandom secureRandom=null;
@@ -17,6 +21,10 @@ public class RandomUtil
         secureRandom.setSeed(bytes);
     }
 
+    private RandomUtil()
+    {
+        //Default constructor to hide public constructor
+    }
     public static SecureRandom getSecureRandomInstance()
     {
         if(secureRandom==null)
@@ -28,7 +36,6 @@ public class RandomUtil
         }
         return secureRandom;
     }
-
 
 
     public static long getSecureRandomLongValue()
