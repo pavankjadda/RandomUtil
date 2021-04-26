@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.pj</groupId>
     <artifactId>randomutil</artifactId>
-    <version>0.0.5</version>
+    <version>1.0.0</version>
     <name>randomutil</name>
     <description>Secure Random Utility class that generates Secure Random strings, long, integer and boolean values</description>
 
